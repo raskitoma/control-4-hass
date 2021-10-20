@@ -1,0 +1,1391 @@
+- id: A_Z1Vol
+  alias: Trigger Z1 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone1_volume
+  action:
+  - service: c4_services.handle_zone1_amp_volume_select
+- id: A_Z1Inp
+  alias: Trigger Z1 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone1_input
+  action:
+    service: c4_services.handle_zone1_amp_input_select
+- id: A_Z1ON
+  alias: Trigger Z1 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone1_input
+  action:
+    service: c4_services.handle_zone1_amp_on_select
+- id: A_Z1OFF
+  alias: Trigger Z1 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone1_input
+  action:
+    service: c4_services.handle_zone1_amp_off_select
+- id: A_Z1Over
+  alias: Trigger Z1 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone1_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone1_input
+    data_template:
+      option: '{% if is_state(''input_select.zone1_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z2Vol
+  alias: Trigger Z2 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone2_volume
+  action:
+  - service: c4_services.handle_zone2_amp_volume_select
+- id: A_Z2Inp
+  alias: Trigger Z2 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone2_input
+  action:
+    service: c4_services.handle_zone2_amp_input_select
+- id: A_Z2ON
+  alias: Trigger Z2 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone2_input
+  action:
+    service: c4_services.handle_zone2_amp_on_select
+- id: A_Z2OFF
+  alias: Trigger Z2 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone2_input
+  action:
+    service: c4_services.handle_zone2_amp_off_select
+- id: A_Z2Over
+  alias: Trigger Z2 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone2_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone2_input
+    data_template:
+      option: '{% if is_state(''input_select.zone2_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z3Vol
+  alias: Trigger Z3 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone3_volume
+  action:
+  - service: c4_services.handle_zone3_amp_volume_select
+- id: A_Z3Inp
+  alias: Trigger Z3 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone3_input
+  action:
+    service: c4_services.handle_zone3_amp_input_select
+- id: A_Z3ON
+  alias: Trigger Z3 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone3_input
+  action:
+    service: c4_services.handle_zone3_amp_on_select
+- id: A_Z3OFF
+  alias: Trigger Z3 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone3_input
+  action:
+    service: c4_services.handle_zone3_amp_off_select
+- id: A_Z3Over
+  alias: Trigger Z3 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone3_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone3_input
+    data_template:
+      option: '{% if is_state(''input_select.zone3_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z4Vol
+  alias: Trigger Z4 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone4_volume
+  action:
+  - service: c4_services.handle_zone4_amp_volume_select
+- id: A_Z4Inp
+  alias: Trigger Z4 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone4_input
+  action:
+    service: c4_services.handle_zone4_amp_input_select
+- id: A_Z4ON
+  alias: Trigger Z4 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone4_input
+  action:
+    service: c4_services.handle_zone4_amp_on_select
+- id: A_Z4OFF
+  alias: Trigger Z4 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone4_input
+  action:
+    service: c4_services.handle_zone4_amp_off_select
+- id: A_Z4Over
+  alias: Trigger Z4 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone4_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone4_input
+    data_template:
+      option: '{% if is_state(''input_select.zone4_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z5Vol
+  alias: Trigger Z5 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone5_volume
+  action:
+  - service: c4_services.handle_zone5_amp_volume_select
+- id: A_Z5Inp
+  alias: Trigger Z5 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone5_input
+  action:
+    service: c4_services.handle_zone5_amp_input_select
+- id: A_Z5ON
+  alias: Trigger Z5 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone5_input
+  action:
+    service: c4_services.handle_zone5_amp_on_select
+- id: A_Z5OFF
+  alias: Trigger Z5 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone5_input
+  action:
+    service: c4_services.handle_zone5_amp_off_select
+- id: A_Z5Over
+  alias: Trigger Z5 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone5_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone5_input
+    data_template:
+      option: '{% if is_state(''input_select.zone5_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z6Vol
+  alias: Trigger Z6 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone6_volume
+  action:
+  - service: c4_services.handle_zone6_amp_volume_select
+- id: A_Z6Inp
+  alias: Trigger Z6 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone6_input
+  action:
+    service: c4_services.handle_zone6_amp_input_select
+- id: A_Z6ON
+  alias: Trigger Z6 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone6_input
+  action:
+    service: c4_services.handle_zone6_amp_on_select
+- id: A_Z6OFF
+  alias: Trigger Z6 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone6_input
+  action:
+    service: c4_services.handle_zone6_amp_off_select
+- id: A_Z6Over
+  alias: Trigger Z6 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone6_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone6_input
+    data_template:
+      option: '{% if is_state(''input_select.zone6_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z7Vol
+  alias: Trigger Z7 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone7_volume
+  action:
+  - service: c4_services.handle_zone7_amp_volume_select
+- id: A_Z7Inp
+  alias: Trigger Z7 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone7_input
+  action:
+    service: c4_services.handle_zone7_amp_input_select
+- id: A_Z7ON
+  alias: Trigger Z7 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone7_input
+  action:
+    service: c4_services.handle_zone7_amp_on_select
+- id: A_Z7OFF
+  alias: Trigger Z7 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone7_input
+  action:
+    service: c4_services.handle_zone7_amp_off_select
+- id: A_Z7Over
+  alias: Trigger Z7 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone7_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone7_input
+    data_template:
+      option: '{% if is_state(''input_select.zone7_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_Z8Vol
+  alias: Trigger Z8 Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zone8_volume
+  action:
+  - service: c4_services.handle_zone8_amp_volume_select
+- id: A_Z8Inp
+  alias: Trigger Z8 Input
+  trigger:
+    platform: state
+    entity_id: input_select.zone8_input
+  action:
+    service: c4_services.handle_zone8_amp_input_select
+- id: A_Z8ON
+  alias: Trigger Z8 On
+  trigger:
+    platform: state
+    entity_id: input_select.zone8_input
+  action:
+    service: c4_services.handle_zone8_amp_on_select
+- id: A_Z8OFF
+  alias: Trigger Z8 Off
+  trigger:
+    platform: state
+    entity_id: input_select.zone8_input
+  action:
+    service: c4_services.handle_zone8_amp_off_select
+- id: A_Z8Over
+  alias: Trigger Z8 Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zone8_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zone8_input
+    data_template:
+      option: '{% if is_state(''input_select.zone8_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: '1633140673042'
+  alias: z1vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone1_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone1_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        target:
+          entity_id: input_text.z1vc
+        data:
+          value: black
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone1_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        target:
+          entity_id: input_text.z1vc
+        data:
+          value: '#44739E'
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone1_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z1vc
+    default:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.z1vc
+      data:
+        value: black
+  mode: single
+- id: '1633143204333'
+  alias: z2vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone2_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone2_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z2vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone2_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z2vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone2_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z2vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z2vc
+  mode: single
+- id: '1633143261991'
+  alias: z3vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone3_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone3_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z3vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone3_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z3vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone3_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z3vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z3vc
+  mode: single
+- id: '1633143311749'
+  alias: z4vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone4_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone4_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z4vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone4_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z4vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone4_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z4vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z4vc
+  mode: single
+- id: '1633143346501'
+  alias: z5vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone5_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone5_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z5vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone5_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z5vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone5_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z5vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z5vc
+  mode: single
+- id: '1633143370220'
+  alias: z6vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone6_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone6_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z6vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone6_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z6vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone6_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z6vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z6vc
+  mode: single
+- id: '1633143406686'
+  alias: z7vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone7_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone7_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z7vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone7_volume
+        above: '7'
+        below: '41'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z7vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone7_volume
+        above: '40'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z7vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z7vc
+  mode: single
+- id: '1633143425480'
+  alias: z8vc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zone8_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone8_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z8vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone8_volume
+        above: '7'
+        below: '41'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z8vc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zone8_volume
+        above: '40'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z8vc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z8vc
+- id: A_z1bbVol
+  alias: Trigger z1b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb1_volume
+  action:
+  - service: c4_services.handle_zoneb1_amp_volume_select
+- id: A_z1bInp
+  alias: Trigger z1b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb1_input
+  action:
+    service: c4_services.handle_zoneb1_amp_input_select
+- id: A_z1bON
+  alias: Trigger z1b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb1_input
+  action:
+    service: c4_services.handle_zoneb1_amp_on_select
+- id: A_z1bOFF
+  alias: Trigger z1b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb1_input
+  action:
+    service: c4_services.handle_zoneb1_amp_off_select
+- id: A_z1bOver
+  alias: Trigger z1b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb1_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb1_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb1_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z2bVol
+  alias: Trigger z2b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb2_volume
+  action:
+  - service: c4_services.handle_zoneb2_amp_volume_select
+- id: A_z2bInp
+  alias: Trigger z2b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb2_input
+  action:
+    service: c4_services.handle_zoneb2_amp_input_select
+- id: A_z2bON
+  alias: Trigger z2b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb2_input
+  action:
+    service: c4_services.handle_zoneb2_amp_on_select
+- id: A_z2bOFF
+  alias: Trigger z2b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb2_input
+  action:
+    service: c4_services.handle_zoneb2_amp_off_select
+- id: A_z2bOver
+  alias: Trigger z2b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb2_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb2_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb2_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z3bVol
+  alias: Trigger z3b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb3_volume
+  action:
+  - service: c4_services.handle_zoneb3_amp_volume_select
+- id: A_z3bInp
+  alias: Trigger z3b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb3_input
+  action:
+    service: c4_services.handle_zoneb3_amp_input_select
+- id: A_z3bON
+  alias: Trigger z3b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb3_input
+  action:
+    service: c4_services.handle_zoneb3_amp_on_select
+- id: A_z3bOFF
+  alias: Trigger z3b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb3_input
+  action:
+    service: c4_services.handle_zoneb3_amp_off_select
+- id: A_z3bOver
+  alias: Trigger z3b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb3_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb3_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb3_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z4bVol
+  alias: Trigger z4b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb4_volume
+  action:
+  - service: c4_services.handle_zoneb4_amp_volume_select
+- id: A_z4bInp
+  alias: Trigger z4b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb4_input
+  action:
+    service: c4_services.handle_zoneb4_amp_input_select
+- id: A_z4bON
+  alias: Trigger z4b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb4_input
+  action:
+    service: c4_services.handle_zoneb4_amp_on_select
+- id: A_z4bOFF
+  alias: Trigger z4b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb4_input
+  action:
+    service: c4_services.handle_zoneb4_amp_off_select
+- id: A_z4bOver
+  alias: Trigger z4b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb4_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb4_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb4_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z5bVol
+  alias: Trigger z5b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb5_volume
+  action:
+  - service: c4_services.handle_zoneb5_amp_volume_select
+- id: A_z5bInp
+  alias: Trigger z5b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb5_input
+  action:
+    service: c4_services.handle_zoneb5_amp_input_select
+- id: A_z5bON
+  alias: Trigger z5b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb5_input
+  action:
+    service: c4_services.handle_zoneb5_amp_on_select
+- id: A_z5bOFF
+  alias: Trigger z5b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb5_input
+  action:
+    service: c4_services.handle_zoneb5_amp_off_select
+- id: A_z5bOver
+  alias: Trigger z5b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb5_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb5_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb5_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z6bVol
+  alias: Trigger z6b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb6_volume
+  action:
+  - service: c4_services.handle_zoneb6_amp_volume_select
+- id: A_z6bInp
+  alias: Trigger z6b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb6_input
+  action:
+    service: c4_services.handle_zoneb6_amp_input_select
+- id: A_z6bON
+  alias: Trigger z6b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb6_input
+  action:
+    service: c4_services.handle_zoneb6_amp_on_select
+- id: A_z6bOFF
+  alias: Trigger z6b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb6_input
+  action:
+    service: c4_services.handle_zoneb6_amp_off_select
+- id: A_z6bOver
+  alias: Trigger z6b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb6_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb6_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb6_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z7bVol
+  alias: Trigger z7b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb7_volume
+  action:
+  - service: c4_services.handle_zoneb7_amp_volume_select
+- id: A_z7bInp
+  alias: Trigger z7b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb7_input
+  action:
+    service: c4_services.handle_zoneb7_amp_input_select
+- id: A_z7bON
+  alias: Trigger z7b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb7_input
+  action:
+    service: c4_services.handle_zoneb7_amp_on_select
+- id: A_z7bOFF
+  alias: Trigger z7b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb7_input
+  action:
+    service: c4_services.handle_zoneb7_amp_off_select
+- id: A_z7bOver
+  alias: Trigger z7b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb7_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb7_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb7_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: A_z8bVol
+  alias: Trigger z8b Volume
+  trigger:
+    platform: state
+    entity_id: input_number.zoneb8_volume
+  action:
+  - service: c4_services.handle_zoneb8_amp_volume_select
+- id: A_z8bInp
+  alias: Trigger z8b Input
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb8_input
+  action:
+    service: c4_services.handle_zoneb8_amp_input_select
+- id: A_z8bON
+  alias: Trigger z8b On
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb8_input
+  action:
+    service: c4_services.handle_zoneb8_amp_on_select
+- id: A_z8bOFF
+  alias: Trigger z8b Off
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb8_input
+  action:
+    service: c4_services.handle_zoneb8_amp_off_select
+- id: A_z8bOver
+  alias: Trigger z8b Override
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_select.zoneb8_txt_input
+  action:
+    service: input_select.select_option
+    entity_id: input_select.zoneb8_input
+    data_template:
+      option: '{% if is_state(''input_select.zoneb8_txt_input'', ''Sonos'') %}1 {%
+        else %}1 ### whatever you want to be default {%- endif %}'
+- id: z1bvc_changer
+  alias: z1bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb1_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb1_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        target:
+          entity_id: input_text.z1bvc
+        data:
+          value: black
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb1_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        target:
+          entity_id: input_text.z1bvc
+        data:
+          value: '#44739E'
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb1_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z1bvc
+    default:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.z1bvc
+      data:
+        value: black
+  mode: single
+- id: z2bvc_changer
+  alias: z2bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb2_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb2_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z2bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb2_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z2bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb2_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z2bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z2vc
+  mode: single
+- id: z3bvc_changer
+  alias: z3bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb3_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb3_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z3bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb3_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z3bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb3_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z3bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z3bvc
+  mode: single
+- id: z4bvc_changer
+  alias: z4bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb4_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb4_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z4bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb4_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z4bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb4_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z4bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z4bvc
+  mode: single
+- id: z5bvc_changer
+  alias: z5bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb5_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb5_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z5bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb5_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z5bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb5_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z5bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z5bvc
+  mode: single
+- id: z6bvc_changer
+  alias: z6bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb6_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb6_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z6bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb6_volume
+        above: '7'
+        below: '51'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z6bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb6_volume
+        above: '50'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z6bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z6bvc
+  mode: single
+- id: z7bvc_changer
+  alias: z7bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb7_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb7_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z7bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb7_volume
+        above: '7'
+        below: '41'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z7bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb7_volume
+        above: '40'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z7bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z7bvc
+  mode: single
+- id: z8bvc_changer
+  alias: z8bvc_changer
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_number.zoneb8_volume
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb8_volume
+        below: '7'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: black
+        target:
+          entity_id: input_text.z8bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb8_volume
+        above: '7'
+        below: '41'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: '#44739E'
+        target:
+          entity_id: input_text.z8bvc
+    - conditions:
+      - condition: numeric_state
+        entity_id: input_number.zoneb8_volume
+        above: '40'
+      sequence:
+      - service: input_text.set_value
+        data:
+          value: red
+        target:
+          entity_id: input_text.z8bvc
+    default:
+    - service: input_text.set_value
+      data:
+        value: black
+      target:
+        entity_id: input_text.z8bvc
+  mode: single

@@ -1,0 +1,413 @@
+##############################################
+# C4_SERVICES START **************************
+c4_services:
+input_select:
+  zone1_input:
+    name: z1c4
+    options:
+      - 1
+  zone1_txt_input:
+    name: Z1 Dining Input
+    options:
+     - Sonos
+  zone2_input:
+    name: z2c4
+    options:
+      - 1
+  zone2_txt_input:
+    name: Z2 Patio 1 Input
+    options:
+     - Sonos
+  zone3_input:
+    name: z3c4
+    options:
+      - 1
+  zone3_txt_input:
+    name: Z3 Patio 2 Input
+    options:
+     - Sonos
+  zone4_input:
+    name: z4c4
+    options:
+      - 1
+  zone4_txt_input:
+    name: Z4 BBQ Input
+    options:
+     - Sonos
+  zone5_input:
+    name: z5c4
+    options:
+      - 1
+  zone5_txt_input:
+    name: Z5 Kitchen Input
+    options:
+     - Sonos
+  zone6_input:
+    name: z6c4
+    options:
+      - 1
+  zone6_txt_input:
+    name: Z6 Foyer Input
+    options:
+     - Sonos
+  zone7_input:
+    name: z7c4
+    options:
+      - 1
+  zone7_txt_input:
+    name: Z7 Master Input
+    options:
+     - Sonos
+  zone8_input:
+    name: z8c4
+    options:
+      - 1
+  zone8_txt_input:
+    name: Z8 Master Bath Input
+    options:
+     - Sonos
+  # Amp 2 -----
+  zoneb1_input:
+    name: z1bc4
+    options:
+      - 1
+  zoneb1_txt_input:
+    name: z1b Dining Input
+    options:
+     - Sonos
+  zoneb2_input:
+    name: z2c4
+    options:
+      - 1
+  zoneb2_txt_input:
+    name: Z2 Patio 1 Input
+    options:
+     - Sonos
+  zoneb3_input:
+    name: z3bc4
+    options:
+      - 1
+  zoneb3_txt_input:
+    name: z3b Patio 2 Input
+    options:
+     - Sonos
+  zoneb4_input:
+    name: z4bc4
+    options:
+      - 1
+  zoneb4_txt_input:
+    name: z4b BBQ Input
+    options:
+     - Sonos
+  zoneb5_input:
+    name: z5bc4
+    options:
+      - 1
+  zoneb5_txt_input:
+    name: z5b Kitchen Input
+    options:
+     - Sonos
+  zoneb6_input:
+    name: z6bc4
+    options:
+      - 1
+  zoneb6_txt_input:
+    name: z6b Foyer Input
+    options:
+     - Sonos
+  zoneb7_input:
+    name: z7bc4
+    options:
+      - 1
+  zoneb7_txt_input:
+    name: z7b Master Input
+    options:
+     - Sonos
+  zoneb8_input:
+    name: z8bc4
+    options:
+      - 1
+  zoneb8_txt_input:
+    name: z8b Master Bath Input
+    options:
+     - Sonos
+
+input_boolean:
+  zone1_state:
+    name: z1c4bool
+  zone2_state:
+    name: z2c4bool
+  zone3_state:
+    name: z3c4bool
+  zone4_state:
+    name: z4c4bool
+  zone5_state:
+    name: z5c4bool
+  zone6_state:
+    name: z6c4bool
+  zone7_state:
+    name: z7c4bool
+  zone8_state:
+    name: z8c4bool
+  # Amp2 -----
+  zoneb1_state:
+    name: z1bc4bool
+  zoneb2_state:
+    name: z2bc4bool
+  zoneb3_state:
+    name: z3bc4bool
+  zoneb4_state:
+    name: z4bc4bool
+  zoneb5_state:
+    name: z5bc4bool
+  zoneb6_state:
+    name: z6bc4bool
+  zoneb7_state:
+    name: z7bc4bool
+  zoneb8_state:
+    name: z8bc4bool
+    
+switch:
+  - platform: template
+    switches:
+      zone1_switch:
+        friendly_name: Z1 Dining
+        value_template: "{{ is_state('input_boolean.zone1_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone1_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone1_state
+        turn_off:
+          - service: c4_services.handle_zone1_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone1_state
+  - platform: template
+    switches:
+      zone2_switch:
+        friendly_name: Z2 Patio 1
+        value_template: "{{ is_state('input_boolean.zone2_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone2_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone2_state
+        turn_off:
+          - service: c4_services.handle_zone2_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone2_state
+  - platform: template
+    switches:
+      zone3_switch:
+        friendly_name: Z3 Patio 2
+        value_template: "{{ is_state('input_boolean.zone3_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone3_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone3_state
+        turn_off:
+          - service: c4_services.handle_zone3_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone3_state
+  - platform: template
+    switches:
+      zone4_switch:
+        friendly_name: Z4 BBQ
+        value_template: "{{ is_state('input_boolean.zone4_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone4_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone4_state
+        turn_off:
+          - service: c4_services.handle_zone4_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone4_state
+  - platform: template
+    switches:
+      zone5_switch:
+        friendly_name: Z5 Kitchen
+        value_template: "{{ is_state('input_boolean.zone5_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone5_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone5_state
+        turn_off:
+          - service: c4_services.handle_zone5_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone5_state
+  - platform: template
+    switches:
+      zone6_switch:
+        friendly_name: Z6 Foyer
+        value_template: "{{ is_state('input_boolean.zone6_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone6_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone6_state
+        turn_off:
+          - service: c4_services.handle_zone6_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone6_state
+  - platform: template
+    switches:
+      zone7_switch:
+        friendly_name: Z7 Master
+        value_template: "{{ is_state('input_boolean.zone7_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone7_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone7_state
+        turn_off:
+          - service: c4_services.handle_zone7_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone7_state
+  - platform: template
+    switches:
+      zone8_switch:
+        friendly_name: Z8 Master Bath
+        value_template: "{{ is_state('input_boolean.zone8_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zone8_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zone8_state
+        turn_off:
+          - service: c4_services.handle_zone8_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zone8_state
+  # Amp 2 -----
+  - platform: template
+    switches:
+      zoneb1_switch:
+        friendly_name: Z1 Pool
+        value_template: "{{ is_state('input_boolean.zoneb1_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb1_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb1_state
+        turn_off:
+          - service: c4_services.handle_zoneb1_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb1_state
+  - platform: template
+    switches:
+      zoneb2_switch:
+        friendly_name: Z2 Pool
+        value_template: "{{ is_state('input_boolean.zoneb2_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb2_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb2_state
+        turn_off:
+          - service: c4_services.handle_zoneb2_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb2_state
+  - platform: template
+    switches:
+      zoneb3_switch:
+        friendly_name: Z3B Zone 3 Garage
+        value_template: "{{ is_state('input_boolean.zoneb3_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb3_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb3_state
+        turn_off:
+          - service: c4_services.handle_zoneb3_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb3_state
+  - platform: template
+    switches:
+      zoneb4_switch:
+        friendly_name: Z4B Zone 4 B
+        value_template: "{{ is_state('input_boolean.zoneb4_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb4_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb4_state
+        turn_off:
+          - service: c4_services.handle_zoneb4_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb4_state
+  - platform: template
+    switches:
+      zoneb5_switch:
+        friendly_name: Z5B Zone 5 B
+        value_template: "{{ is_state('input_boolean.zoneb5_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb5_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb5_state
+        turn_off:
+          - service: c4_services.handle_zoneb5_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb5_state
+  - platform: template
+    switches:
+      zoneb6_switch:
+        friendly_name: Z6B Zone 6 B
+        value_template: "{{ is_state('input_boolean.zoneb6_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb6_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb6_state
+        turn_off:
+          - service: c4_services.handle_zoneb6_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb6_state
+  - platform: template
+    switches:
+      zoneb7_switch:
+        friendly_name: Z7B Zone 7 B
+        value_template: "{{ is_state('input_boolean.zoneb7_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb7_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb7_state
+        turn_off:
+          - service: c4_services.handle_zoneb7_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb7_state
+  - platform: template
+    switches:
+      zoneb8_switch:
+        friendly_name: Z8B Zone 8 B
+        value_template: "{{ is_state('input_boolean.zoneb8_state', 'on') }}"
+        turn_on:
+          - service: c4_services.handle_zoneb8_amp_on_select
+          - service: input_boolean.turn_on
+            data:
+              entity_id: input_boolean.zoneb8_state
+        turn_off:
+          - service: c4_services.handle_zoneb8_amp_off_select
+          - service: input_boolean.turn_off
+            data:
+              entity_id: input_boolean.zoneb8_state
+
+# C4_SERVICES END **************************

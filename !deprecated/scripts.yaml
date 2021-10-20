@@ -1,0 +1,266 @@
+# C4 AMP 1
+z1_vol_inc:
+  alias: z1_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zone1_volume
+  mode: single
+  icon: mdi:volume-plus
+z1_vol_dec:
+  alias: z1_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zone1_volume
+  mode: single
+  icon: mdi:volume-minus
+z2_vol_dec:
+  alias: z2_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id:
+      - input_number.zone2_volume
+  mode: single
+  icon: mdi:volume-minus
+z3_vol_dec:
+  alias: z3_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id:
+      - input_number.zone3_volume
+  mode: single
+  icon: mdi:volume-minus
+z2_vol_inc:
+  alias: z2_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id:
+      - input_number.zone2_volume
+  mode: single
+  icon: mdi:volume-plus
+z3_vol_inc:
+  alias: z3_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id:
+      - input_number.zone3_volume
+  mode: single
+  icon: mdi:volume-plus
+z4_vol_dec:
+  alias: z4_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zone4_volume
+  mode: single
+  icon: mdi:volume-minus
+z5_vol_dec:
+  alias: z5_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zone5_volume
+  mode: single
+  icon: mdi:volume-minus
+z6_vol_dec:
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zone6_volume
+  mode: single
+  icon: mdi:volume-minus
+  alias: z6_vol_dec
+z7_vol_dec:
+  alias: z7_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zone7_volume
+  mode: single
+  icon: mdi:volume-minus
+z8_vol_dec:
+  alias: z8_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zone8_volume
+  mode: single
+  icon: mdi:volume-minus
+z4_vol_inc:
+  alias: z4_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zone4_volume
+  mode: single
+  icon: mdi:volume-plus
+z5_vol_inc:
+  alias: z5_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zone5_volume
+  mode: single
+  icon: mdi:volume-plus
+z7_vol_inc:
+  alias: z7_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zone7_volume
+  mode: single
+  icon: mdi:volume-plus
+z8_vol_inc:
+  alias: z8_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zone8_volume
+  mode: single
+  icon: mdi:volume-plus
+z6_vol_inc:
+  alias: z6_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zone6_volume
+  mode: single
+  icon: mdi:volume-plus
+# C4 AMP 2
+z1b_vol_inc:
+  alias: z1b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zoneb1_volume
+  mode: single
+  icon: mdi:volume-plus
+z1b_vol_dec:
+  alias: z1b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zoneb1_volume
+  mode: single
+  icon: mdi:volume-minus
+z2b_vol_dec:
+  alias: z2b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id:
+      - input_number.zoneb2_volume
+  mode: single
+  icon: mdi:volume-minus
+z3b_vol_dec:
+  alias: z3b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id:
+      - input_number.zoneb3_volume
+  mode: single
+  icon: mdi:volume-minus
+z2b_vol_inc:
+  alias: z2b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id:
+      - input_number.zoneb2_volume
+  mode: single
+  icon: mdi:volume-plus
+z3b_vol_inc:
+  alias: z3b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id:
+      - input_number.zoneb3_volume
+  mode: single
+  icon: mdi:volume-plus
+z4b_vol_dec:
+  alias: z4b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zoneb4_volume
+  mode: single
+  icon: mdi:volume-minus
+z5b_vol_dec:
+  alias: z5b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zoneb5_volume
+  mode: single
+  icon: mdi:volume-minus
+z6b_vol_dec:
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zoneb6_volume
+  mode: single
+  icon: mdi:volume-minus
+  alias: z6b_vol_dec
+z7b_vol_dec:
+  alias: z7b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zoneb7_volume
+  mode: single
+  icon: mdi:volume-minus
+z8b_vol_dec:
+  alias: z8b_vol_dec
+  sequence:
+  - service: input_number.decrement
+    target:
+      entity_id: input_number.zoneb8_volume
+  mode: single
+  icon: mdi:volume-minus
+z4b_vol_inc:
+  alias: z4b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zoneb4_volume
+  mode: single
+  icon: mdi:volume-plus
+z5b_vol_inc:
+  alias: z5b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zoneb5_volume
+  mode: single
+  icon: mdi:volume-plus
+z7b_vol_inc:
+  alias: z7b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zoneb7_volume
+  mode: single
+  icon: mdi:volume-plus
+z8b_vol_inc:
+  alias: z8b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zoneb8_volume
+  mode: single
+  icon: mdi:volume-plus
+z6b_vol_inc:
+  alias: z6b_vol_inc
+  sequence:
+  - service: input_number.increment
+    target:
+      entity_id: input_number.zoneb6_volume
+  mode: single
+  icon: mdi:volume-plus
